@@ -1,1 +1,69 @@
-/* Nothing to see here (yet!) */
+:root {
+    --lightColour:  #C0DDF5;
+    --midColour:    #6FA2E8;
+    --darkColour:   #083182;
+}
+
+body {
+    background-color: var(--lightColour);
+    color: var(--darkColour);
+    font-family: futura;
+}
+
+h1, h2 {
+    font-family: superFamicomFont, Georgia, 'Times New Roman', Times, serif;
+}
+
+h3 {
+    font-family: emulogicFont, 'Courier New', Courier, monospace;
+}
+
+#navBar {
+    background-color: var(--lightColour);
+    box-shadow: 0 2em 0.5em -1.5em var(--midColour);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#navBar a {
+    float: left;
+    color: var(--darkColour);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#leftNav {
+    float: left;
+}
+
+#rightNav {
+    float: right;
+}
+
+#mainPage {
+    margin-top: 5em;
+}
+
+@font-face {
+    font-family: emulogicFont;
+    src: url("../Fonts/Emulogic-zrEw.ttf");
+}
+
+@font-face {
+    font-family: superFamicomFont;
+    src: url("../Fonts/SuperFamifont-Bgmw.ttf");
+}
+
+@font-face {
+    font-family: snesFont;
+    src: url("../Fonts/SnesItalic-1G9Be.ttf");
+}
+
+@font-face {
+    font-family: futura;
+    src: url("../Fonts/futura\ medium\ bt.ttf");
+}

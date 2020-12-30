@@ -1,51 +1,59 @@
 :root {
-    --lightColour:  #C0DDF5;
-    --midColour:    #6FA2E8;
-    --darkColour:   #083182;
+    --lightColour:      #C0DDF5;
+    --midColour:        #6FA2E8;
+    --darkColour:       #083182;
+    --lightHighlight:   #DEBB83;
+    --midHighlight:     #9E652F;
+    --darkHighlight:    #261305;
+    --navMargin:        15em;
+    --pageMargin:       5em;
 }
 
 body {
     background-color: var(--lightColour);
     color: var(--darkColour);
     font-family: futura;
+    font-size: 16px;
+    margin-left: var(--navMargin);
 }
 
 h1, h2 {
     font-family: superFamicomFont, Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
 }
 
 h3 {
     font-family: emulogicFont, 'Courier New', Courier, monospace;
+    font-size: 20px;
 }
 
 #navBar {
-    background-color: var(--lightColour);
-    box-shadow: 0 2em 0.5em -1.5em var(--midColour);
+    background-color: var(--darkHighlight);
+    box-shadow: -1em -1em 2em 1em var(--midColour);
     overflow: hidden;
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    height: 100%;
+    width: var(--navMargin);
 }
 
 #navBar a {
-    float: left;
-    color: var(--darkColour);
+    color: var(--lightHighlight);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    display: block;
 }
 
-#leftNav {
-    float: left;
-}
-
-#rightNav {
-    float: right;
+#topNav {
+    display: center;
 }
 
 #mainPage {
-    margin-top: 5em;
+    margin-left: var(--pageMargin);
+    margin-right: var(--pageMargin);
 }
 
 @font-face {

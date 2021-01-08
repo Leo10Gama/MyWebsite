@@ -5,26 +5,78 @@
     --lightHighlight:   #DEBB83;
     --midHighlight:     #9E652F;
     --darkHighlight:    #261305;
-    --navMargin:        15em;
-    --pageMargin:       5em;
+    /* note to the editor (me): PAGE MARGIN MUST STAY 1EM (or so) LESS THAN NAV MARGIN !!!!! */
+    --navMargin:        13em;
+    --pageMargin:       12em;
 }
 
 body {
     background-color: var(--lightColour);
+    height: 100%;
     color: var(--darkColour);
     font-family: futura;
     font-size: 16px;
-    margin-left: var(--navMargin);
+    margin: 0;
 }
 
 h1, h2 {
     font-family: superFamicomFont, Georgia, 'Times New Roman', Times, serif;
     text-align: center;
+    display: inline;
 }
 
 h3 {
     font-family: emulogicFont, 'Courier New', Courier, monospace;
     font-size: 20px;
+}
+
+.about-img {
+    background-image: url("../Resources/Images/img1.png");
+}
+
+.code-projects-img {
+    background-image: url("../Resources/Images/img2.png");
+}
+
+.commissions-img {
+    background-image: url("../Resources/Images/img4.png");
+}
+
+.overlap-text {
+    text-align: center;
+    color: var(--darkColour);
+}
+
+.overlap-text .border {
+    background-color: var(--midColour);
+    padding: 1.5em;
+}
+
+.parallax {
+    min-height: 10em;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    background-attachment: fixed;
+}
+
+.section {
+    text-align: center;
+    padding: 2em 2em;
+}
+
+.subtitle {
+    font-style: italic;
+    text-align: center;
+    font-size: 12px;
+}
+
+.wood-projects-img {
+    background-image: url("../Resources/Images/img3.png");
 }
 
 #navBar {
@@ -36,6 +88,7 @@ h3 {
     left: 0;
     height: 100%;
     width: var(--navMargin);
+    z-index: 100;
 }
 
 #navBar a {
@@ -47,13 +100,12 @@ h3 {
     display: block;
 }
 
-#topNav {
-    display: center;
+#page-container {
+    margin-left: var(--pageMargin)
 }
 
-#mainPage {
-    margin-left: var(--pageMargin);
-    margin-right: var(--pageMargin);
+#topNav {
+    display: center;
 }
 
 @font-face {

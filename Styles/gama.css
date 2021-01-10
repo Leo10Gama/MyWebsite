@@ -30,53 +30,52 @@ h3 {
     font-size: 20px;
 }
 
-.about-img {
-    background-image: url("../Resources/Images/img1.png");
-}
+.image-container {
+    position: static;
 
-.code-projects-img {
-    background-image: url("../Resources/Images/img2.png");
-}
-
-.commissions-img {
-    background-image: url("../Resources/Images/img4.png");
 }
 
 .overlap-text {
     text-align: center;
     color: var(--darkColour);
-}
-
-.overlap-text .border {
+    position: absolute;
+    bottom: 50%;
+    right: 10%;
     background-color: var(--midColour);
     padding: 1.5em;
+    max-width: 40%;
 }
 
 .parallax {
-    min-height: 10em;
+    min-height: 50%;
     width: 100%;
     position: relative;
     background-position: center;
     background-size: cover;
+    opacity: 0.9;
     background-repeat: no-repeat;
-    z-index: 0;
-
-    background-attachment: fixed;
+    z-index: -1;
 }
 
 .section {
     text-align: center;
-    padding: 2em 2em;
+    background-color: var(--lightColour);
+    padding: 0.5em;
+}
+
+.section-breaker {
+    height: 30px;
+    background-color: var(--lightColour);
+}
+
+.section-container {
+    position: relative;
 }
 
 .subtitle {
     font-style: italic;
     text-align: center;
     font-size: 12px;
-}
-
-.wood-projects-img {
-    background-image: url("../Resources/Images/img3.png");
 }
 
 #navBar {

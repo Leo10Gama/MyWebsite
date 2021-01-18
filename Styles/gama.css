@@ -15,7 +15,7 @@ body {
     height: 100%;
     color: var(--darkColour);
     font-family: futura;
-    font-size: 16px;
+    font-size: min(1vw, 16px);
     margin: 0;
 }
 
@@ -29,21 +29,27 @@ h1, h2 {
 
 h3 {
     font-family: emulogicFont, 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 1.5vw;
+}
+
+.border {
+    margin-top: 8vw;
 }
 
 .overlap-text, .overlap-text-right, .overlap-text-left {
     text-align: center;
     color: var(--darkColour);
-    position: absolute;
+    position: relative;
     top: 20%;
     background-color: var(--midColour);
     padding: 1.5em;
     max-width: 45%;
+    border-radius: 5px;
+    box-shadow: 1em 1em 3em 0px #000;
 }
 
 .overlap-text, .overlap-text-right {
-    right: 10%;
+    left: 45%;
 }
 
 .overlap-text-left {
@@ -51,13 +57,13 @@ h3 {
 }
 
 .parallax {
-    min-height: 50%;
-    width: 100%;
-    position: relative;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
     background-position: center;
     background-size: cover;
     overflow: auto;
-    opacity: 0.9;
+    /* opacity: 0.9; */
     background-repeat: no-repeat;
     z-index: -1;
 }
@@ -66,15 +72,17 @@ h3 {
     text-align: center;
     background-color: var(--lightColour);
     padding: 0.5em;
+    border-radius: 5px;
 }
 
 .section-breaker {
-    height: 0px;
+    height: 10px;
     background-color: var(--lightColour);
 }
 
 .section-container {
     position: relative;
+    width: 100%;
 }
 
 .subtitle {
@@ -84,9 +92,16 @@ h3 {
     text-shadow: 0px 0px 5px white;
 }
 
+#me-img {
+    float: right;
+    width: min(30vw, 620px);
+    position: relative;
+    z-index: 420;
+}
+
 #navBar {
     background-color: var(--darkHighlight);
-    box-shadow: -1em -1em 2em 1em var(--midColour);
+    box-shadow: -1em -1em 2em 1em #000;
     overflow: hidden;
     position: fixed;
     top: 0;

@@ -39,7 +39,7 @@ ul {
 
 .bg-image, .parallax {
     min-width: 100%;
-    min-width: 100%;
+    min-height: 100%;
     position: absolute;
     margin: 0 auto;
     background-position: center;
@@ -99,6 +99,11 @@ ul {
     text-align: center;
     font-size: 12px;
     text-shadow: 0px 0px 5px white;
+}
+
+#clouds {
+    min-height: 10vw;
+    max-height: 100vw;
 }
 
 #me-img {

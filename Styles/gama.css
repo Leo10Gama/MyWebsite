@@ -17,6 +17,7 @@ body {
     font-family: futura;
     font-size: min(2vw, 16px);
     margin: 0;
+    z-index: -100;
 }
 
 h1, h2 {
@@ -32,20 +33,20 @@ h3 {
     font-size: 1.5vw;
 }
 
-ul {
+ul.dotless {
     list-style: none;
     padding-left: 0;
 }
 
 .bg-image, .parallax {
     min-width: 100%;
+    max-width: max-content;
     min-height: 100%;
     position: absolute;
     margin: 0 auto;
     background-position: center;
     background-size: cover;
     overflow: auto;
-    /* opacity: 0.9; */
     background-repeat: no-repeat;
 }
 
@@ -77,6 +78,13 @@ ul {
     z-index: -5;
 }
 
+.scrollable-section {
+    overflow-y: scroll; 
+    max-height: 25vw;
+    outline: 2px solid var(--midColour);
+    box-shadow: 0 0 3px 3px var(--midColour);
+}
+
 .section {
     text-align: center;
     background-color: var(--lightColour);
@@ -85,8 +93,10 @@ ul {
 }
 
 .section-breaker {
-    height: 10px;
-    background-color: var(--lightColour);
+    height: 30px;
+    background-color: var(--darkColour);
+    box-shadow: 0 0 1vw 1vw var(--darkColour);
+    z-index: 999;
 }
 
 .section-container {
@@ -104,6 +114,11 @@ ul {
 #clouds {
     min-height: 10vw;
     max-height: 100vw;
+    z-index: -5;
+}
+
+#commissions-img, #wood-projects-img {
+    opacity: 0.7;
 }
 
 #me-img {
@@ -111,7 +126,7 @@ ul {
     width: min(30vw, 620px);
     position: relative;
     right: 5%;
-    z-index: 420;
+    z-index: -1;
 }
 
 #navBar {

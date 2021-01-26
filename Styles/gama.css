@@ -54,6 +54,21 @@ ul.dotless {
     z-index: -1;
 }
 
+.gallery-container {
+    text-align: center;
+}
+
+.gallery-img {
+    max-width: 95%;
+    max-height: 40vw;
+    display: inline-block;
+    position: relative;
+    margin: 2vw;
+    z-index: -2;
+    -webkit-filter: drop-shadow(0 1em 3em #000);
+    filter: drop-shadow(0 1em 2em #000);
+}
+
 .overlap-text, .overlap-text-right, .overlap-text-left {
     text-align: center;
     color: var(--darkColour);
@@ -156,6 +171,45 @@ ul.dotless {
 
 #topNav {
     display: center;
+}
+
+#wood00, #wood03, #wood05, #wood09, #wood12 {
+    height: 25vw;
+    z-index: -2.4;
+}
+
+#wood01, #wood13 {
+    height: 15vw;
+    z-index: -2.6;
+}
+
+#wood02 {
+    height: 35vw;
+    z-index: -2.2;
+}
+
+#wood04, #wood06, #wood10 {
+    height: initial;
+}
+
+#wood08, #wood15 {
+    height: initial;
+    z-index: -1.8;
+}
+
+#wood07 {
+    height: 30vw;
+    z-index: -2.3;
+}
+
+#wood11 {
+    height: 30vw;
+    z-index: -4;
+}
+
+#wood14 {
+    height: 20vw;
+    z-index: -2.5;
 }
 
 @font-face {

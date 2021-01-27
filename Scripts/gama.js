@@ -6,26 +6,24 @@ window.addEventListener("scroll", () => {
 
     translate.forEach(element => {
         let speed = element.dataset.speed;
-        var position = element.getBoundingClientRect();
 
-        // Only do parallax if the thing is on the screen
         element.style.transform = `translateY(${(scroll * speed)}px)`;
-    })
+    });
 })
 
 /* This function gives each gallery image a random offset, as well as
- * a random scale value (within a given range, of course), which then
- * affects the data-speed value given, affecting its parallax. Thus,
- * larger images will scroll more quickly than smaller images to mimic
- * actual parallax
+ * a random scale value (within a given range, of course). This makes
+ * the page slightly different with each load.
  */
-// function setGalleryParallax(imageCaller) {
-//     // Generate a random offset (from the left or right)
-//     var offset = (Math.random() * 1000) / 5;
-//     // Generate the scale of the image (up to 3x as large)
-//     var scale = Math.floor(Math.random() * 3) + 0.75;
-//     var speed = (scale < 1) ? (- (scale / 2)) : (scale / 2);
-//     var zIndex = scale + 20;
-//     imageCaller.setAttribute("style", `transform: scale(${scale}, ${scale}) translateX(${offset}%); z-index: ${zIndex};`);
-//     // imageCaller.setAttribute("data-speed", speed);
-// }
+function setGalleryParallax(imageCaller) {
+    // Generate a random offset (between -1vw to 1vw)
+    var offsetX = Math.random() * 2;
+    var offsetY = Math.random() * 2;
+    // Generate the scale of the image (between x0.9 to x1.1)
+    var scale = (Math.random() * 0.2) + 0.9;
+    // Assign properties
+    if (Math.random() * 2 < 1) imageCaller.style.marginLeft = `${offsetX}vw`;
+    else imageCaller.style.marginRight = `${offsetX}vw`;
+    if (Math.random() * 2 < 1) imageCaller.style.marginTop = `${offsetY}vw`;
+    else imageCaller.style.marginBottom = `${offsetY}vw`;
+}

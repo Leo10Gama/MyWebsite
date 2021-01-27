@@ -58,15 +58,40 @@ ul.dotless {
     text-align: center;
 }
 
-.gallery-img {
+.gallery-img, .gallery-img > img {
     max-width: 95%;
     max-height: 40vw;
     display: inline-block;
     position: relative;
     margin: 2vw;
-    z-index: -2;
     -webkit-filter: drop-shadow(0 1em 3em #000);
     filter: drop-shadow(0 1em 2em #000);
+    opacity: 1;
+}
+
+.gallery-img > .wood-img:hover + p {
+    opacity: 1;
+    z-index: 420;
+}
+
+.gallery-img:hover {
+    z-index: 420;
+}
+
+.image-caption {
+    font-family: emulogicFont, 'Courier New', Courier, monospace;
+    color: var(--darkColour);
+    text-shadow: 
+        -2px -2px 0 var(--midColour),  
+         2px -2px 0 var(--midColour),
+        -2px  2px 0 var(--midColour),
+         2px  2px 0 var(--midColour),
+         2px  0px 0 var(--midColour),
+        -2px  0px 0 var(--midColour),
+         0px  2px 0 var(--midColour),
+         0px -2px 0 var(--midColour);
+    opacity: 0.1;
+    font-size: 1.5vw;
 }
 
 .overlap-text, .overlap-text-right, .overlap-text-left {
@@ -75,6 +100,7 @@ ul.dotless {
     position: relative;
     background-color: var(--midColour);
     transform: translateY(10vw);
+    z-index: 10;
     padding: 1.5em;
     max-width: 45%;
     border-radius: 5px;
@@ -175,41 +201,42 @@ ul.dotless {
 
 #wood00, #wood03, #wood05, #wood09, #wood12 {
     height: 25vw;
-    z-index: -2.4;
+    z-index: 2.6;
 }
 
 #wood01, #wood13 {
     height: 15vw;
-    z-index: -2.6;
+    z-index: 2.4;
 }
 
 #wood02 {
     height: 35vw;
-    z-index: -2.2;
+    z-index: 2.8;
 }
 
 #wood04, #wood06, #wood10 {
     height: initial;
+    z-index: 2.1;
 }
 
 #wood08, #wood15 {
     height: initial;
-    z-index: -1.8;
+    z-index: 3.2;
 }
 
 #wood07 {
     height: 30vw;
-    z-index: -2.3;
+    z-index: 2.7;
 }
 
 #wood11 {
     height: 30vw;
-    z-index: -4;
+    z-index: 2;
 }
 
 #wood14 {
     height: 20vw;
-    z-index: -2.5;
+    z-index: 2.5;
 }
 
 @font-face {

@@ -1,7 +1,7 @@
 // When the screen scrolls
 window.addEventListener("scroll", () => {
     // Parallax stuff
-    const translate = document.querySelectorAll(".parallax, .gallery-img");
+    const translate = document.querySelectorAll(".parallax, .gallery-img, .wood-link");
     let scroll = window.pageYOffset;
 
     translate.forEach(element => {

@@ -73,7 +73,7 @@ ul.dotless {
     opacity: 1;
 }
 
-.gallery-img > .wood-img:hover + p {
+.gallery-img > .wood-img:hover ~ p {
     opacity: 1;
     z-index: 420;
 }
@@ -82,9 +82,26 @@ ul.dotless {
     z-index: 420;
 }
 
-.image-caption {
-    font-family: emulogicFont, 'Courier New', Courier, monospace;
+.image-caption, .image-title {
+    opacity: 0;
     color: var(--darkColour);
+}
+
+.image-caption {
+    font-family: futura, Arial, Helvetica, sans-serif;
+    text-shadow: 
+        -1px -1px 2px var(--midColour),  
+         1px -1px 2px var(--midColour),
+        -1px  1px 2px var(--midColour),
+         1px  1px 2px var(--midColour),
+         1px  0px 2px var(--midColour),
+        -1px  0px 2px var(--midColour),
+         0px  1px 2px var(--midColour),
+         0px -1px 2px var(--midColour);
+}
+
+.image-title {
+    font-family: emulogicFont, 'Courier New', Courier, monospace;
     text-shadow: 
         -2px -2px 0 var(--midColour),  
          2px -2px 0 var(--midColour),
@@ -94,7 +111,6 @@ ul.dotless {
         -2px  0px 0 var(--midColour),
          0px  2px 0 var(--midColour),
          0px -2px 0 var(--midColour);
-    opacity: 0.1;
     font-size: 1.5vw;
 }
 
@@ -208,12 +224,12 @@ ul.dotless {
     border-bottom: 1px solid var(--midHighlight);
 }
 
-#wood00, #wood03, #wood05, #wood09, #wood12 {
+#wood00, #wood03, #wood04, #wood05, #wood09, #wood12 {
     height: 25vw;
     z-index: 2.6;
 }
 
-#wood01, #wood13 {
+#wood01, #wood10, #wood13 {
     height: 15vw;
     z-index: 2.4;
 }
@@ -223,13 +239,13 @@ ul.dotless {
     z-index: 2.8;
 }
 
-#wood04, #wood06, #wood10 {
-    height: initial;
+#wood06 {
+    height: 40vw;
     z-index: 2.1;
 }
 
 #wood08 {
-    height: initial;
+    height: 30vw;
     z-index: 3.2;
 }
 

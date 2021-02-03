@@ -1,13 +1,16 @@
 :root {
+    /* Colours */
     --lightColour:      #C0DDF5;
     --midColour:        #6FA2E8;
     --darkColour:       #083182;
     --lightHighlight:   #DEBB83;
     --midHighlight:     #9E652F;
     --darkHighlight:    #261305;
-    /* note to the editor (me): PAGE MARGIN MUST STAY 1EM (or so) LESS THAN NAV MARGIN !!!!! */
+    /* Margins and sizes */
     --navMargin:        13em;
-    --pageMargin:       12em;
+    --pageMargin:       calc(var(--navMargin) - 1em);
+    --topMargin:        60px;
+    --mobileMargin:     950px;
 }
 
 body {
@@ -15,7 +18,7 @@ body {
     height: 100%;
     color: var(--darkColour);
     font-family: futura;
-    font-size: min(2vw, 16px);
+    font-size: min(1.5vw, 16px);
     margin: 0;
     z-index: -100;
 }
@@ -43,8 +46,7 @@ ul.dotless {
 }
 
 .bg-image, .parallax {
-    min-width: 100%;
-    max-width: max-content;
+    max-width: 100%;
     min-height: 100%;
     position: absolute;
     margin: 0 auto;
@@ -168,7 +170,7 @@ ul.dotless {
 .subtitle {
     font-style: italic;
     text-align: center;
-    font-size: 12px;
+    font-size: min(1.5vw, 12px);
     text-shadow: 0px 0px 5px white;
 }
 
@@ -180,6 +182,7 @@ ul.dotless {
     min-height: 10vw;
     max-height: 100vw;
     z-index: -5;
+    background-repeat: repeat;
 }
 
 #commissions-img, #wood-projects-img {
@@ -213,6 +216,11 @@ ul.dotless {
     text-decoration: none;
     font-size: 17px;
     display: block;
+    text-shadow: 2px 2px 5px var(--midHighlight);
+}
+
+#navBurger > input {
+    display: none;
 }
 
 #page-container {
@@ -262,6 +270,53 @@ ul.dotless {
 #wood14, #wood16 {
     height: 20vw;
     z-index: 2.5;
+}
+
+/* For mobile optimization */
+@media (max-width: 950px) {
+
+    #page-container {
+        margin-left: 0;
+        margin-top: var(--topMargin);
+    }
+
+    #navBar {
+        box-shadow: 0 -1em 2em 1em #000;
+        overflow: hidden;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        text-align: center;
+        height: var(--topMargin);
+        width: 100%;
+        z-index: 100;
+    }
+
+    #topNav {
+        border-bottom: 0;
+        min-height: var(--topMargin);
+    }
+
+    #topNav > a {
+        margin: auto;
+        float: left;
+    }
+
+    #navBurger > input {
+        float: right;
+        height: 4vh;
+        margin-top: 5px;
+        display: inline-block;
+    }
+
+    #bottomNav > a {
+        text-align: right;
+        display: block;
+    }
+
+    .section-container > img {
+        max-width: 100%;
+    }
 }
 
 @font-face {

@@ -27,3 +27,26 @@ function setGalleryParallax(imageCaller) {
     if (Math.random() * 2 < 1) imageCaller.style.marginTop = `${offsetY}vw`;
     else imageCaller.style.marginBottom = `${offsetY}vw`;
 }
+
+/* This function adjusts the navbar size when the burger is clicked
+ */
+function burger() {
+    // Get the navbar
+    var nav = document.getElementById("navBar");
+    var currentSize = nav.style.getPropertyValue("height");
+    var newSize;
+    if (currentSize == "" || currentSize == "var(--topMargin)") {
+        newSize = "275px";
+    } else {
+        newSize = "var(--topMargin)";
+    }
+    nav.style.setProperty("height", newSize);
+}
+window.addEventListener("resize", () => {
+    var nav = document.getElementById("navBar");
+    if (window.innerWidth > 950) {
+        nav.style.setProperty("height", "");
+    } else {
+        nav.style.setProperty("height", "var(--topMargin)");
+    }
+})

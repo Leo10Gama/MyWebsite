@@ -4,7 +4,7 @@
     --midColour:        #6FA2E8;
     --darkColour:       #083182;
     --lightHighlight:   #DEBB83;
-    --midHighlight:     #9E652F;
+    --midHighlight:     rgb(219, 134, 54);
     --darkHighlight:    #261305;
     /* Margins and sizes */
     --navMargin:        13em;
@@ -36,17 +36,13 @@ h3 {
     font-size: 1.5vw;
 }
 
-a.wood-link:hover {
-    text-decoration: none;
-}
-
 ul.dotless {
     list-style: none;
     padding-left: 0;
 }
 
 .bg-image, .parallax {
-    max-width: 100%;
+    width: 100%;
     min-height: 100%;
     position: absolute;
     margin: 0 auto;
@@ -64,7 +60,7 @@ ul.dotless {
     text-align: center;
 }
 
-.gallery-img, .gallery-img > img, .wood-link img {
+.gallery-img, .gallery-img > img, .wood-link {
     max-width: 95%;
     max-height: 40vw;
     display: inline-block;
@@ -174,8 +170,12 @@ ul.dotless {
     text-shadow: 0px 0px 5px white;
 }
 
-.wood-link img {
-    height: 7vw;
+.wood-link-container .wood-link {
+    height: 8vw;
+}
+
+.wood-link-container:hover {
+    text-decoration: none;
 }
 
 #clouds {
@@ -183,6 +183,19 @@ ul.dotless {
     max-height: 100vw;
     z-index: -5;
     background-repeat: repeat;
+}
+
+#commission-subtitle {
+    display: inline-block;
+    transform: translate(-16vw, -9vw) scale(4, 4) rotate(-10deg);
+    color: var(--midHighlight);
+    text-shadow: 
+        0px 0px 2.5px var(--darkHighlight),
+        0px 0px 2.5px var(--darkHighlight),
+        0px 0px 2.5px var(--darkHighlight),
+        0px 0px 2.5px var(--darkHighlight),
+        0px 0px 2.5px var(--darkHighlight); 
+    font-family: snesFont;
 }
 
 #commissions-img, #wood-projects-img {
@@ -219,6 +232,11 @@ ul.dotless {
     text-shadow: 2px 2px 5px var(--midHighlight);
 }
 
+#navBar a:hover {
+    color: var(--midHighlight);
+    transition: color 0.5s;
+}
+
 #navBurger > input {
     display: none;
 }
@@ -232,7 +250,7 @@ ul.dotless {
     border-bottom: 1px solid var(--midHighlight);
 }
 
-#wood00, #wood03, #wood04, #wood05, #wood09, #wood12 {
+#wood00, #wood03, #wood05, #wood09, #wood12 {
     height: 25vw;
     z-index: 2.6;
 }
@@ -245,6 +263,11 @@ ul.dotless {
 #wood02 {
     height: 35vw;
     z-index: 2.8;
+}
+
+#wood04, #wood14, #wood16 {
+    height: 20vw;
+    z-index: 2.5;
 }
 
 #wood06 {
@@ -267,17 +290,16 @@ ul.dotless {
     z-index: 2;
 }
 
-#wood14, #wood16 {
-    height: 20vw;
-    z-index: 2.5;
-}
-
 /* For mobile optimization */
 @media (max-width: 950px) {
+    
+    .section-container > img {
+        max-width: 100%;
+    }
 
-    #page-container {
-        margin-left: 0;
-        margin-top: var(--topMargin);
+    #bottomNav > a {
+        text-align: right;
+        display: block;
     }
 
     #navBar {
@@ -290,6 +312,19 @@ ul.dotless {
         height: var(--topMargin);
         width: 100%;
         z-index: 100;
+        transition: height 0.5s;
+    }
+
+    #navBurger > input {
+        float: right;
+        height: 4vh;
+        margin-top: 10px;
+        display: inline-block;
+    }
+
+    #page-container {
+        margin-left: 0;
+        margin-top: var(--topMargin);
     }
 
     #topNav {
@@ -302,21 +337,6 @@ ul.dotless {
         float: left;
     }
 
-    #navBurger > input {
-        float: right;
-        height: 4vh;
-        margin-top: 5px;
-        display: inline-block;
-    }
-
-    #bottomNav > a {
-        text-align: right;
-        display: block;
-    }
-
-    .section-container > img {
-        max-width: 100%;
-    }
 }
 
 @font-face {
@@ -325,8 +345,8 @@ ul.dotless {
 }
 
 @font-face {
-    font-family: superFamicomFont;
-    src: url("../Fonts/SuperFamifont-Bgmw.ttf");
+    font-family: futura;
+    src: url("../Fonts/futura\ medium\ bt.ttf");
 }
 
 @font-face {
@@ -335,6 +355,6 @@ ul.dotless {
 }
 
 @font-face {
-    font-family: futura;
-    src: url("../Fonts/futura\ medium\ bt.ttf");
+    font-family: superFamicomFont;
+    src: url("../Fonts/SuperFamifont-Bgmw.ttf");
 }

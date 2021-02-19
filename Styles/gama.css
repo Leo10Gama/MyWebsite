@@ -250,12 +250,12 @@ ul.dotless {
     border-bottom: 1px solid var(--midHighlight);
 }
 
-#wood00, #wood03, #wood05, #wood09, #wood12 {
+#wood00, #wood03, #wood05, #wood09, #wood12, #wood13 {
     height: 25vw;
     z-index: 2.6;
 }
 
-#wood01, #wood10, #wood13 {
+#wood01, #wood10 {
     height: 15vw;
     z-index: 2.4;
 }
